@@ -632,6 +632,7 @@
     <Compile Include="Assets\scripts\hero.cs" />
     <Compile Include="Assets\scripts\laser.cs" />
     <Compile Include="Assets\scripts\Main.cs" />
+    <Compile Include="Assets\scripts\menu.cs" />
     <Compile Include="Assets\scripts\PowerUp.cs" />
     <Compile Include="Assets\scripts\Projectile.cs" />
     <Compile Include="Assets\scripts\rocket.cs" />

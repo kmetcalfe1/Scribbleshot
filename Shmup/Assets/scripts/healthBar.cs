@@ -86,7 +86,10 @@ public class healthBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (princessScript.lost)
+        {
+            StartCoroutine(lose());
+        }
     }
     IEnumerator wait()
     {
@@ -117,5 +120,10 @@ public class healthBar : MonoBehaviour
         winSound.Play();
         yield return new WaitForSeconds(3);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    IEnumerator lose()
+    {
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("menu");
     }
 }

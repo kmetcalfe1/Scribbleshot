@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2850127870171797725}
   m_Layer: 17
   m_Name: balloon1
-  m_TagString: ground
+  m_TagString: balloon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

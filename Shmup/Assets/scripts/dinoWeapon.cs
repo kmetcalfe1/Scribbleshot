@@ -51,7 +51,7 @@ public class dinoWeapon : MonoBehaviour
         random = Random.Range(0, phases.Count);
         phases.RemoveAt(random);
         
-        //random = 2;
+        random = 3;
         if (random == 0f)
         {
             InvokeRepeating("Fire", 2.0f, 1.5f);
@@ -98,6 +98,7 @@ public class dinoWeapon : MonoBehaviour
             {
                 CancelInvoke("balloon");
                 CancelInvoke("hat");
+
             }
             if ((phases.Count==3) || (phase.red && phases.Count==2))
             {

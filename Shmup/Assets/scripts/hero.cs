@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class hero : MonoBehaviour
 {
+    public bool lost = false;
+    public GameObject loser;
     static public hero s;
     Animator anim;
     public float gameRestartDelay = 2f;
@@ -115,7 +118,7 @@ public class hero : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "ground")
+        if (collision.gameObject.tag == "ground" || collision.gameObject.tag == "balloon")
         {
             land.Play();
             grounded = true;
@@ -243,10 +246,12 @@ public class hero : MonoBehaviour
             //if the shield is going to be set to less than zero
             if (value < 0)
             {
+                lost = true;
+                loser.SetActive(true);
                 Destroy(this.gameObject);
-                //Tell Main.S to restart the game after a delay
-                Main.s.DelayedRestart(gameRestartDelay);
+                
             }
         }
     }
+
 }

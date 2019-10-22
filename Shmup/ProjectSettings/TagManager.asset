@@ -16,6 +16,7 @@ TagManager:
   - cloud
   - laser
   - hat
+  - balloon
   layers:
   - Default
   - TransparentFX
